@@ -1,0 +1,75 @@
+
+public class Produto{
+     
+        
+    double preco;
+    String nome;
+        
+    void InformarNome(){ //método
+        System.out.println("O nome do produto é: "+nome);//o que ométodo executa
+    }
+    
+    void InformarPreco(){
+        System.out.println("O preço do produto é: "+preco);
+    }
+    
+    void FazerPromocao(){
+        preco = preco - 1;
+    }
+}
+
+
+public class TestarProduto{
+    public static void main(){
+        Produto Biscoito = new Produto(); //cria objeto
+        
+        Biscoito.nome = "Biscoito Treloso de morango 120g"; //atributos
+        Biscoito.preco = 2.99;
+        
+        Biscoito.InformarNome();
+        Biscoito.InformarPreco();
+        Biscoito.FazerPromocao();
+        Biscoito.InformarPreco();
+    }
+}
+
+
+
+
+public class Interruptor{
+   
+    boolean ligado = false;
+    
+    void pressionar(){ //método
+        if(ligado == false){
+            ligado = true;      
+        }else{
+        
+            ligado = false;    
+        }
+    }
+    
+    void verificarLampada(){
+        if (ligado == true){
+            System.out.println("A lâmpada está ligada");
+        }else
+        
+            System.out.println("A lâmpada está desligada");
+        }
+    }
+     
+
+
+
+public class TestarInterruptor{
+    public static void main(){
+        Interruptor Interruptor = new Interruptor();
+        
+        Interruptor.ligado = false;
+        
+        Interruptor.pressionar();
+        Interruptor.verificarLampada();
+        Interruptor.pressionar();
+        Interruptor.verificarLampada();
+    }
+}
